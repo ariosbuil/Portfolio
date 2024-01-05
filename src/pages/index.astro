@@ -1,27 +1,143 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Project from '../components/Project.astro';
+import BiographyImage from '../images/Biography-photo.jpg';
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Arnau Rios I Buil">
 	<main>
-		<Project
-			title='CHROM VANADIUM'
-			description='Research, development, or marketing efforts for a material commonly used in high-quality tools.'
-			href='#'
-			img="https://unsplash.it/400/400"
-		/>
+		<!-- About Me section -->
+		<div class="row">
+			<div class="card left-card">
+				<h1>ARNAU RIOS I BUIL</h1>
+				<p>Full-Stack Developer specialized in system design</p>
+				<div>
+					<p>Sabadell</p>
+					<p>Barcelona</p>
+				</div>
+			</div>
+			<div class="card middle-card">
+				<h3>Biography</h3>
+				<img src={BiographyImage.src} alt="">
+				<div class="bottom-info">
+					<div>
+						<p>Graduated in Web Development</p>
+						<p>Looking for a full time job</p>
+					</div>
+					<p>See more</p>
+				</div>
+			</div>
+			<div class="card right-card">
+				<div>
+					<h3>Interests</h3>
+					<ul>
+						<li>Web Design</li>
+						<li>Interface Design</li>
+						<li>Videogames</li>
+						<li>Databases</li>
+					</ul>
+				</div>
+				<div>
+					<h3>Socials</h3>
+					<ul>
+						<li><a href="#">Twitter</a></li>
+						<li><a href="#">LinkedIn</a></li>
+						<li><a href="#">Instagram</a></li>
+						<li><a href="#">TikTok</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- Projects section -->
+		<div class="row">
+			<Project 
+				title='CHROM VANADIUM'
+				description='Research, development, or marketing efforts for a material commonly used in high-quality tools.'
+				href='#'
+				img="https://unsplash.it/400/400"
+			/>
+			<Project 
+				title='CHROM VANADIUM'
+				description='Research, development, or marketing efforts for a material commonly used in high-quality tools.'
+				href='#'
+				img="https://unsplash.it/400/400"
+			/>
+			<Project 
+				title='CHROM VANADIUM'
+				description='Research, development, or marketing efforts for a material commonly used in high-quality tools.'
+				href='#'
+				img="https://unsplash.it/400/400"
+			/>
+			<Project 
+				title='CHROM VANADIUM'
+				description='Research, development, or marketing efforts for a material commonly used in high-quality tools.'
+				href='#'
+				img="https://unsplash.it/400/400"
+			/>
+		</div>
 	</main>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
+	:root {
+		--background-color: #060608;
+		--background-card-color: #353536;
 	}
+
+	main {
+		color: white;
+		background-color: var(--background-color);
+		line-height: 1.6;
+		height: 100%;
+		padding: 1rem;
+	}
+
+	.row {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 10px;
+		margin: 10px;
+	}
+
+	.card {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 1rem;
+		border-radius: 15px;
+	}
+
+	.middle-card {
+		background-color: var(--background-card-color);
+	}
+
+	.middle-card img {
+		height: 400px;
+		width: 400px;
+		align-self: center;
+		padding: 1rem;
+	}
+
+	.middle-card h3 {
+		text-align: right;
+	}
+
+	.middle-card .bottom-info {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.right-card {
+		align-items: flex-end;
+	}
+
+	.right-card div {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		width: 100px;
+	}
+
 </style>
