@@ -1,13 +1,15 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Project from '../components/Project.astro';
-import BiographyImage from '../images/Biography-photo.jpg';
+import Layout from "../layouts/Layout.astro";
+import Project from "../components/Project.astro";
+import BiographyImage from "../images/Biography-photo.jpg";
 ---
 
 <Layout title="Arnau Rios I Buil">
 	<main>
 		<!-- About Me section -->
-		<div class="row">
+		<div
+			class="row grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4"
+		>
 			<div class="card left-card">
 				<h1>ARNAU RIOS I BUIL</h1>
 				<p>Full-Stack Developer specialized in system design</p>
@@ -18,7 +20,7 @@ import BiographyImage from '../images/Biography-photo.jpg';
 			</div>
 			<div class="card middle-card">
 				<h3>Biography</h3>
-				<img src={BiographyImage.src} alt="">
+				<img src={BiographyImage.src} alt="" />
 				<div class="bottom-info">
 					<div>
 						<p>Graduated in Web Development</p>
@@ -47,32 +49,29 @@ import BiographyImage from '../images/Biography-photo.jpg';
 					</ul>
 				</div>
 			</div>
-		</div>
-
-		<!-- Projects section -->
-		<div class="row">
-			<Project 
-				title='CHROM VANADIUM'
-				description='Research, development, or marketing efforts for a material commonly used in high-quality tools.'
-				href='#'
+			<!-- Projects section -->
+			<Project
+				title="CHROM VANADIUM"
+				description="Research, development, or marketing efforts for a material commonly used in high-quality tools."
+				href="#"
 				img="https://unsplash.it/400/400"
 			/>
-			<Project 
-				title='CHROM VANADIUM'
-				description='Research, development, or marketing efforts for a material commonly used in high-quality tools.'
-				href='#'
+			<Project
+				title="CHROM VANADIUM"
+				description="Research, development, or marketing efforts for a material commonly used in high-quality tools."
+				href="#"
 				img="https://unsplash.it/400/400"
 			/>
-			<Project 
-				title='CHROM VANADIUM'
-				description='Research, development, or marketing efforts for a material commonly used in high-quality tools.'
-				href='#'
+			<Project
+				title="CHROM VANADIUM"
+				description="Research, development, or marketing efforts for a material commonly used in high-quality tools."
+				href="#"
 				img="https://unsplash.it/400/400"
 			/>
-			<Project 
-				title='CHROM VANADIUM'
-				description='Research, development, or marketing efforts for a material commonly used in high-quality tools.'
-				href='#'
+			<Project
+				title="CHROM VANADIUM"
+				description="Research, development, or marketing efforts for a material commonly used in high-quality tools."
+				href="#"
 				img="https://unsplash.it/400/400"
 			/>
 		</div>
@@ -91,13 +90,6 @@ import BiographyImage from '../images/Biography-photo.jpg';
 		line-height: 1.6;
 		height: 100%;
 		padding: 1rem;
-	}
-
-	.row {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 10px;
-		margin: 10px;
 	}
 
 	.card {
@@ -139,5 +131,4 @@ import BiographyImage from '../images/Biography-photo.jpg';
 		align-items: flex-start;
 		width: 100px;
 	}
-
 </style>
