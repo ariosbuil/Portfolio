@@ -1,0 +1,12 @@
+---
+interface Props {
+    text: string;
+}
+
+const { text } = Astro.props;
+---
+
+<div class="bg-quote flex flex-col w-full h-auto p-4 rounded justify-between shadow-md">
+    <blockquote>{text}</blockquote>
+    <img class="self-end w-[30px]" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAbtJREFUSEuNVet5g0AMkzdJN4FNyCRkE5pJmlHYxM29fH6R9n7xgc62bMkQAWCoE17oj/25Yq6ABAJLzIKSM6/0px5IX0jSAbBBK0aFsHd07D+YaSKhOEU2YWAjVwaWlOurbl2sd9BZCDgYuKVtILzAWHueBaAD4I4NtE8AX6NTI94PgCULrloxZjaxSUvV6ECqd/xxmA3YEniZDBladVWsSnAlPCPHwYC9cpIhU8PM8w87lHoqzGBtMpFsY6A0qy7pqk2TFQORujOS3PUMiGth2lzBrERdslW3U76pefwMeoIrSesh9xblRjO2uprBpfWjivResMUFBgeBNze9uWesTA8wthk79FLmq2Xq115T/RgLIO4cQBXWK/Bk4+Qomsc79N4CycdvAPdk/yms4AWrfFAD3d7S2IW+TbAC9JoWoBvAOwib3YT10oq6u5zRoirFUqXyUtXgMxsXl5dg3aqwPujNP8G1LS/jj3xZlxndC0u/3kcNZVBnL/HZXz4Sv45lVwKW8+yYMosgLD+DSHi0JTHrh5Zatzk5uiSXe8ngkm3a2OR2T42TssuKMyXlmW3V8/+SrBAr5VDEL0/y3xxfkySgAAAAAElFTkSuQmCC"/>
+</div>

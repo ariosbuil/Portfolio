@@ -1,144 +1,148 @@
 ---
-	import Layout from "../layouts/Layout.astro";
-	import Project from "../components/Project.astro";
-	import BiographyImage from "../images/Biography-photo.jpg";
+import Layout from "../layouts/Layout.astro";
+import Project from "../components/Project.astro";
+import BiographyImage from "../images/Biography-photo.jpg";
 ---
 
-	<Layout title="Arnau Rios I Buil">
-		<main>
-			<!-- About Me section -->
-			<div
-				class="row grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4"
-			>
-				<div class="card left-card">
-					<h1>ARNAU RIOS I BUIL</h1>
-					<p>Full-Stack Developer specialized in system design</p>
-					<div>
-						<p>Sabadell</p>
-						<p>Barcelona</p>
-					</div>
+<Layout title="Arnau Rios I Buil">
+	<main>
+		<!-- About Me section -->
+		<div
+			class="row grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4"
+		>
+			<div class="card left-card">
+				<h1>ARNAU RIOS I BUIL</h1>
+				<p>Full-Stack Developer specialized in system design</p>
+				<div>
+					<p>Sabadell</p>
+					<p>Barcelona</p>
 				</div>
-				<a href="biography">
-					<div class="card middle-card">
-						<h3 class="secondary-color">Biography</h3>
-						<img src={BiographyImage.src} alt="Portrait Photo" />
-						<div class="bottom-info">
-							<div>
-								<p>Graduated in Web Development</p>
-								<p class="secondary-color">Looking for a full time job</p>
-							</div>
-							<p class="text-center">See more</p>
-						</div>
-					</div>
-				</a>
-				<div class="card right-card flex lg:items-end md:items-start sm:items-start">
-					<div>
-						<h3 class="secondary-color">Interests</h3>
-						<ul>
-							<li>Web Design</li>
-							<li>Interface Design</li>
-							<li>Videogames</li>
-							<li>Databases</li>
-						</ul>
-					</div>
-					<div>
-						<h3 class="secondary-color">Socials</h3>
-						<ul>
-							<li><a href="#">Twitter</a></li>
-							<li><a href="#">LinkedIn</a></li>
-							<li><a href="#">Instagram</a></li>
-							<li><a href="#">TikTok</a></li>
-						</ul>
-					</div>
-				</div>
-				<!-- Projects section -->
-				<Project
-					title="CHROM VANADIUM"
-					description="Research, development, or marketing efforts for a material commonly used in high-quality tools."
-					href="#"
-					img="https://unsplash.it/400/400"
-				/>
-				<Project
-					title="CHROM VANADIUM"
-					description="Research, development, or marketing efforts for a material commonly used in high-quality tools."
-					href="#"
-					img="https://unsplash.it/400/400"
-				/>
-				<Project
-					title="CHROM VANADIUM"
-					description="Research, development, or marketing efforts for a material commonly used in high-quality tools."
-					href="#"
-					img="https://unsplash.it/400/400"
-				/>
-				<Project
-					title="CHROM VANADIUM"
-					description="Research, development, or marketing efforts for a material commonly used in high-quality tools."
-					href="#"
-					img="https://unsplash.it/400/400"
-				/>
 			</div>
-		</main>
-	</Layout>
+			<a href="/biography">
+				<div class="card middle-card bg-card hover:bg-card-hover transition duration-300">
+					<h3 class="secondary-color">Biography</h3>
+					<img
+						class="shadow-md object-cover"
+						src={BiographyImage.src}
+						alt="Portrait Photo"
+					/>
+					<div class="bottom-info">
+						<div class="w-[250px]">
+							<p>Graduated in Web Development</p>
+							<p class="secondary-color">
+								Looking for a full time job
+							</p>
+						</div>
+						<p class="text-center hover:text-text-hover transition duration-300">See more</p>
+					</div>
+				</div>
+			</a>
+			<div
+				class="right-card p-4 flex justify-between lg:flex-col lg:items-end md:flex-col md:items-start sm:items-start sm:flex-row sm:items-center"
+			>
+				<div>
+					<h3 class="secondary-color">Interests</h3>
+					<ul>
+						<li>Web Design</li>
+						<li>Design</li>
+						<li>Videogames</li>
+						<li>Databases</li>
+					</ul>
+				</div>
+				<div>
+					<h3 class="secondary-color">Socials</h3>
+					<ul>
+						<li><a href="#" class="hover:text-text-hover hover:underline">Twitter</a></li>
+						<li><a href="#" class="hover:text-text-hover hover:underline">LinkedIn</a></li>
+						<li><a href="#" class="hover:text-text-hover hover:underline">Instagram</a></li>
+						<li><a href="#" class="hover:text-text-hover hover:underline">TikTok</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- Projects section -->
+			<Project
+				title="CHROM VANADIUM"
+				description="Research, development, or marketing efforts for a material commonly used in high-quality tools."
+				href="#"
+				img="https://unsplash.it/400/400"
+			/>
+			<Project
+				title="CHROM VANADIUM"
+				description="Research, development, or marketing efforts for a material commonly used in high-quality tools."
+				href="#"
+				img="https://unsplash.it/400/400"
+			/>
+			<Project
+				title="CHROM VANADIUM"
+				description="Research, development, or marketing efforts for a material commonly used in high-quality tools."
+				href="#"
+				img="https://unsplash.it/400/400"
+			/>
+			<Project
+				title="CHROM VANADIUM"
+				description="Research, development, or marketing efforts for a material commonly used in high-quality tools."
+				href="#"
+				img="https://unsplash.it/400/400"
+			/>
+		</div>
+	</main>
+</Layout>
 
-	<style>
-		:root {
-			--background-card-color: #353536;
-			--text-secondary-color: #A5A5A5;
-		}
+<style>
+	:root {
+		--background-card-color: #353536;
+		--background-card-hover: #2f2f30;
+		--text-secondary-color: #a5a5a5;
+		--hover-color-orange: #de2e03;
+	}
 
-		main {
-			color: white;
-			line-height: 1.6;
-			height: 100%;
-			padding: 1rem;
-		}
+	main {
+		color: white;
+		line-height: 1.6;
+		padding: 1rem;
+	}
 
-		.secondary-color {
-			color: var(--text-secondary-color);
-		}
+	.secondary-color {
+		color: var(--text-secondary-color);
+	}
 
-		.card {
-			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
-			padding: 1rem;
-			border-radius: 10px;
-			height: 600px;
-		}
+	.card {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 1rem;
+		border-radius: 10px;
+		height: 600px;
+	}
 
-		.left-card h1 {
-			font-size: 30px;
-		}
+	.left-card h1 {
+		font-size: 30px;
+	}
 
-		.left-card p {
-			width: 40%;
-		}
+	.left-card p {
+		width: 40%;
+	}
 
-		.middle-card {
-			background-color: var(--background-card-color);
-		}
+	.middle-card img {
+		height: 350px;
+		width: 350px;
+		align-self: center;
+	}
 
-		.middle-card img {
-			height: 400px;
-			width: 400px;
-			align-self: center;
-			padding: 1rem;
-		}
+	.middle-card h3 {
+		text-align: right;
+	}
 
-		.middle-card h3 {
-			text-align: right;
-		}
+	.middle-card .bottom-info {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
 
-		.middle-card .bottom-info {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-		}
-
-		.right-card div {
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			width: 100px;
-		}
-	</style>
+	.right-card div {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		width: 100px;
+	}
+</style>
