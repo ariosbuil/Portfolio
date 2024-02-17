@@ -22,7 +22,7 @@ import BiographyImage from "../images/Biography-photo.jpg";
 				<div class="card middle-card bg-card hover:bg-card-hover transition duration-300">
 					<h3 class="secondary-color">Biography</h3>
 					<img
-						class="shadow-md object-cover"
+						class="shadow-md object-cover "
 						src={BiographyImage.src}
 						alt="Portrait Photo"
 					/>
@@ -38,7 +38,7 @@ import BiographyImage from "../images/Biography-photo.jpg";
 				</div>
 			</a>
 			<div
-				class="right-card p-4 flex justify-between lg:flex-col lg:items-end md:flex-col md:items-start sm:items-start sm:flex-row sm:items-center"
+				class="right-card p-4 flex justify-between lg:flex-col lg:items-end md:flex-col md:items-start sm:flex-row sm:items-center"
 			>
 				<div>
 					<h3 class="secondary-color">Interests</h3>
@@ -84,6 +84,15 @@ import BiographyImage from "../images/Biography-photo.jpg";
 				href="#"
 				img="https://unsplash.it/400/400"
 			/>
+			<Project
+				title="CHROM VANADIUM"
+				description="Research, development, or marketing efforts for a material commonly used in high-quality tools."
+				href="#"
+				img="https://unsplash.it/400/400"
+			/>
+			<div class="rounded-md md:col-span-2 text-center lg:col-span-1 lg:flex justify-center items-center">
+				<p>&copy; 2024. Handcrafted by Arnau</p>
+			</div>
 		</div>
 	</main>
 </Layout>
@@ -93,7 +102,6 @@ import BiographyImage from "../images/Biography-photo.jpg";
 		--background-card-color: #353536;
 		--background-card-hover: #2f2f30;
 		--text-secondary-color: #a5a5a5;
-		--hover-color-orange: #de2e03;
 	}
 
 	main {
@@ -146,3 +154,5 @@ import BiographyImage from "../images/Biography-photo.jpg";
 		width: 100px;
 	}
 </style>
+
+<script src="../scripts/infinite-scroll.js"></script>
