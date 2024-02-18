@@ -1,13 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Quote from "../components/Quote.astro";
+import Experience from "../components/Experience.astro";
 import BiographyPhoto from "../images/Biography-photo.jpg";
 import IconAstro from "../images/tech-stack/astro-icon.svg";
 import IconCss from "../images/tech-stack/css-3.svg";
 import IconHtml from "../images/tech-stack/html-5.svg";
 import IconJava from "../images/tech-stack/java.svg";
 import IconJavaScript from "../images/tech-stack/javascript.svg";
-import IconMYSql from "../images/tech-stack/mysql-icon.svg";
 import IconNodeJS from "../images/tech-stack/nodejs.svg";
 import IconPHP from "../images/tech-stack/php.svg";
 import IconTailwind from "../images/tech-stack/tailwindcss-icon.svg";
@@ -37,40 +37,60 @@ import IconTailwind from "../images/tech-stack/tailwindcss-icon.svg";
                         />
                     </div>
                     <div class="grid lg:grid-cols-2 gap-4 w-full">
-                        <Quote text="Esto es una prueba" />
-                        <Quote text="Esto es una prueba" />
-                        <Quote text="Esto es una prueba" />
-                        <Quote text="Esto es una prueba" />
+                        <Quote text="Coding dreams into existence on the canvas of the internet." />
+                        <Quote text="Code is poetry written for machines." />
+                        <Quote text="Turning ideas into reality through the language of the web." />
+                        <Quote text="Pixels may be tiny, but the impact is mighty." />
                     </div>
                 </div>
-                <!-- Photo Gallery -->
-                <div class="lg:col-span-1 p-4 bg-card rounded"></div>
+                <!-- Experience -->
+                <div class="lg:col-span-1 p-4 bg-card rounded h-[440px] overflow-auto">
+                    <h2>Laboral experience</h2>
+                    <Experience />
+                </div>
             </div>
             <!-- Biography Content 2nd Row -->
             <div class="grid lg:grid-cols-3 gap-4 mb-4">
                 <!-- Tech Stack -->
-                <div class="lg:col-span-2 p-4 bg-card rounded">
-                    <div class="scroller flex" data-speed="fast">
-                        <div class="scroller__inner logos-slide flex">
-                            <img src={IconAstro.src} alt="" />
-                            <img src={IconCss.src} alt="" />
-                            <img src={IconHtml.src} alt="" />
-                            <img src={IconJava.src} alt="" />
-                            <img src={IconJavaScript.src} alt="" />
-                            <img src={IconMYSql.src} alt="" />
-                            <img src={IconNodeJS.src} alt="" />
-                            <img src={IconPHP.src} alt="" />
-                            <img src={IconTailwind.src} alt="" />
+                <div class="lg:col-span-1 p-4 bg-card rounded overflow-hidden h-[200px]">
+                    <div class="slider gap-4 flex justify-around">
+                        <div class="flex flex-col gap-10">
+                            <img class="mt-10" src={IconJavaScript.src} alt=""/>
+                            <img src={IconNodeJS.src} alt=""/>
+                            <img src={IconPHP.src} alt=""/>
+                            <img src={IconTailwind.src} alt=""/>
+                        </div>
+                        <div class="flex flex-col gap-10">
+                            <img class="mt-10" src={IconAstro.src} alt=""/>
+                            <img src={IconCss.src} alt=""/>
+                            <img src={IconHtml.src} alt=""/>
+                            <img src={IconJava.src} alt=""/>
+                        </div>
+                    </div>
+                    <div class="slider gap-4 flex justify-around">
+                        <div class="flex flex-col gap-10">
+                            <img class="mt-10" src={IconJavaScript.src} alt=""/>
+                            <img src={IconNodeJS.src} alt=""/>
+                            <img src={IconPHP.src} alt=""/>
+                            <img src={IconTailwind.src} alt=""/>
+                        </div>
+                        <div class="flex flex-col gap-10">
+                            <img class="mt-10" src={IconAstro.src} alt=""/>
+                            <img src={IconCss.src} alt=""/>
+                            <img src={IconHtml.src} alt=""/>
+                            <img src={IconJava.src} alt=""/>
                         </div>
                     </div>
                 </div>
-                <div class="lg:col-span-1 p-4 bg-card rounded"></div>
+                <div class="lg:col-span-2 p-4 bg-card rounded">
+                    <h2>Skills</h2>
+
+                </div>
             </div>
         </div>
     </main>
 </Layout>
 
-<script src="../scripts/infinite-scroll.js"></script>
 
 <style>
     :root {
@@ -83,64 +103,21 @@ import IconTailwind from "../images/tech-stack/tailwindcss-icon.svg";
         padding: 1rem;
     }
 
-    .scroller__inner {
-        width: 600px;
-        padding-block: 1rem;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 3rem;
+    .slider {
+        animation: marquee 5s linear infinite;
     }
 
-    .scroller__inner img {
-        width: 54.5px;
+    .slider > div > img {
+        width: 60px;
+        height: 60px;
     }
 
-    .scroller[data-animated="true"] {
-        overflow: hidden;
-        -webkit-mask: linear-gradient(
-            90deg,
-            transparent,
-            white 20%,
-            white 80%,
-            transparent
-        );
-        mask: linear-gradient(
-            90deg,
-            transparent,
-            white 20%,
-            white 80%,
-            transparent
-        );
+    @keyframes marquee {
+        from {
+            transform: translateY(0);
+        } to {
+            transform: translateY(-100%);
+        }
     }
-
-    .scroller[data-animated="true"] .scroller__inner {
-        width: max-content;
-        flex-wrap: nowrap;
-        animation: scroll var(--_animation-duration, 40s)
-            var(--_animation-direction, forwards) linear infinite;
-    }
-
-    .scroller[data-direction="right"] {
-        --_animation-direction: reverse;
-    }
-
-    .scroller[data-direction="left"] {
-        --_animation-direction: forwards;
-    }
-
-    .scroller[data-speed="fast"] {
-        --_animation-duration: 2s;
-    }
-
-    .scroller[data-speed="slow"] {
-        --_animation-duration: 60s;
-    }
-
-    @keyframes scroll {
-  to {
-    transform: translate(calc(-100% - .5rem));
-  }
-}
-
 </style>
 

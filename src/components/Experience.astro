@@ -1,0 +1,28 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+
+const EXPERIENCE = [
+    {
+        date : "January 2024",
+        title : "4i",
+        description : "Full-Stack developer working on the front-end and back-end of the project. We use ASP.NET Core for the back-end and VB.NET for the front-end.",
+    },
+    {
+        date : "June 2023",
+        title : "4i",
+        description : "Internship as a full-stack developer. I worked on the front-end and back-end of the project. We used ASP.NET Core for the back-end and VB.NET for the front-end."
+    }
+]
+---
+
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">                  
+    {
+        EXPERIENCE.map(experience => (
+            <li class="mb-10 ms-4">
+                <ExperienceItem {...experience} />
+            </li>
+        ))
+    }
+</ol>
+
