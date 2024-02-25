@@ -2,7 +2,6 @@
 import Layout from "../layouts/Layout.astro";
 import Quote from "../components/Quote.astro";
 import Experience from "../components/Experience.astro";
-import BiographyPhoto from "../images/Biography-photo.jpg";
 import IconAstro from "../images/tech-stack/astro-icon.svg";
 import IconCss from "../images/tech-stack/css-3.svg";
 import IconHtml from "../images/tech-stack/html-5.svg";
@@ -11,6 +10,7 @@ import IconJavaScript from "../images/tech-stack/javascript.svg";
 import IconNodeJS from "../images/tech-stack/nodejs.svg";
 import IconPHP from "../images/tech-stack/php.svg";
 import IconTailwind from "../images/tech-stack/tailwindcss-icon.svg";
+import ContactMe from "../components/ContactMe.astro";
 ---
 
 <Layout title="Biography">
@@ -26,13 +26,13 @@ import IconTailwind from "../images/tech-stack/tailwindcss-icon.svg";
                 </p>
             </div>
             <!-- Biography Content 1st Row -->
-            <div class="grid lg:grid-cols-3 gap-4">
+            <div class="grid lg:grid-cols-3 gap-4 h-[500px]">
                 <!-- Quotes -->
                 <div class="lg:col-span-2 p-4 bg-card flex gap-4 rounded">
                     <div>
                         <img
                             class="h-[400px] object-cover rounded shadow-md"
-                            src={BiographyPhoto.src}
+                            src="Biography-photo.jpg"
                             alt="Portrait Photo"
                         />
                     </div>
@@ -44,15 +44,15 @@ import IconTailwind from "../images/tech-stack/tailwindcss-icon.svg";
                     </div>
                 </div>
                 <!-- Experience -->
-                <div class="lg:col-span-1 p-4 bg-card rounded h-[440px] overflow-auto">
-                    <h2>Laboral experience</h2>
+                <div class="lg:col-span-1 p-4 bg-card rounded overflow-auto">
+                    <h2 class="font-bold text-[24px]">Laboral experience</h2>
                     <Experience />
                 </div>
             </div>
             <!-- Biography Content 2nd Row -->
-            <div class="grid lg:grid-cols-3 gap-4 mb-4">
+            <div class="grid lg:grid-cols-3 gap-4 mb-4 h-[220px]">
                 <!-- Tech Stack -->
-                <div class="lg:col-span-1 p-4 bg-card rounded overflow-hidden h-[200px]">
+                <div class="lg:col-span-1 p-4 bg-card rounded overflow-hidden">
                     <div class="slider gap-4 flex justify-around">
                         <div class="flex flex-col gap-10">
                             <img class="mt-10" src={IconJavaScript.src} alt=""/>
@@ -83,8 +83,8 @@ import IconTailwind from "../images/tech-stack/tailwindcss-icon.svg";
                     </div>
                 </div>
                 <div class="lg:col-span-2 p-4 bg-card rounded">
-                    <h2>Skills</h2>
-
+                    <h2 class="font-bold text-[24px]">Contact me</h2>
+                    <ContactMe text="An opportunity? A piece of advice? Good things come to those who don't wait. Reach out to me below!"/>
                 </div>
             </div>
         </div>
@@ -108,8 +108,8 @@ import IconTailwind from "../images/tech-stack/tailwindcss-icon.svg";
     }
 
     .slider > div > img {
-        width: 60px;
-        height: 60px;
+        width: 80px;
+        height: 80px;
     }
 
     @keyframes marquee {

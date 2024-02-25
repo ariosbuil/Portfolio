@@ -1,0 +1,32 @@
+---
+import GithubIcon from '../images/contact-me/GithubIcon.svg'
+import GMailIcon from '../images/contact-me/GMailIcon.svg'
+import LinkedInIcon from '../images/contact-me/LinkedInIcon.svg'
+import TwitterIcon from '../images/contact-me/TwitterIcon.svg'
+
+interface Props {
+    text: string;
+}
+
+const { text } = Astro.props;
+---
+
+<div class="flex flex-col gap-4">
+    <div>
+        <p>{text}</p>
+    </div>
+    <div class="flex gap-4 justify-center items-center">
+        <a href="">
+            <img class="w-[70px]" src={GMailIcon.src} alt="Github" />
+        </a>
+        <a href="">
+            <img class="w-[50px]" src={GithubIcon.src} alt="Github" />
+        </a>
+        <a href="">
+            <img class="w-[70px]" src={LinkedInIcon.src} alt="Github" />
+        </a>
+        <a href="">
+            <img class="w-[50px]" src={TwitterIcon.src} alt="Github" />
+        </a>
+    </div>
+</div>
