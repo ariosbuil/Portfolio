@@ -18,10 +18,12 @@ import Project from "../components/Project.astro";
 				</div>
 			</div>
 			<a href="/biography">
-				<div class="card middle-card bg-card hover:bg-card-hover transition duration-300">
+				<div
+					class="card middle-card bg-card card-animation hover:bg-card-hover transition duration-300 h-[600px]"
+				>
 					<h3 class="secondary-color">Biography</h3>
 					<img
-						class="shadow-md object-cover "
+						class="shadow-md object-cover"
 						src="Biography-photo.jpg"
 						alt="Portrait Photo"
 					/>
@@ -32,7 +34,11 @@ import Project from "../components/Project.astro";
 								Looking for a full time job
 							</p>
 						</div>
-						<p class="text-center hover:text-text-hover transition duration-300">See more</p>
+						<p
+							class="text-center hover:text-text-hover transition duration-300"
+						>
+							See more
+						</p>
 					</div>
 				</div>
 			</a>
@@ -51,10 +57,38 @@ import Project from "../components/Project.astro";
 				<div>
 					<h3 class="secondary-color">Socials</h3>
 					<ul>
-						<li><a href="#" class="hover:text-text-hover hover:underline">Twitter</a></li>
-						<li><a href="#" class="hover:text-text-hover hover:underline">LinkedIn</a></li>
-						<li><a href="#" class="hover:text-text-hover hover:underline">Instagram</a></li>
-						<li><a href="#" class="hover:text-text-hover hover:underline">TikTok</a></li>
+						<li>
+							<a
+								href="#"
+								class="hover:text-text-hover hover:underline flex items-center gap-1"
+								>Twitter<span
+									class="icon-[material-symbols--arrow-outward-rounded]"
+								></span></a>
+						</li>
+						<li>
+							<a
+								href="#"
+								class="hover:text-text-hover hover:underline flex items-center gap-1"
+								>LinkedIn<span
+									class="icon-[material-symbols--arrow-outward-rounded]"
+								></span></a>
+						</li>
+						<li>
+							<a
+								href="#"
+								class="hover:text-text-hover hover:underline flex items-center gap-1"
+								>Instagram<span
+									class="icon-[material-symbols--arrow-outward-rounded]"
+								></span></a>
+						</li>
+						<li>
+							<a
+								href="#"
+								class="hover:text-text-hover hover:underline flex items-center gap-"
+								>TikTok<span
+									class="icon-[material-symbols--arrow-outward-rounded]"
+								></span></a>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -89,7 +123,9 @@ import Project from "../components/Project.astro";
 				href="#"
 				img="https://unsplash.it/400/400"
 			/>
-			<div class="rounded-md md:col-span-2 text-center lg:col-span-1 lg:flex justify-center items-center">
+			<div
+				class="rounded-md md:col-span-2 text-center lg:col-span-1 lg:flex justify-center items-center"
+			>
 				<p>&copy; 2024. Handcrafted by Arnau</p>
 			</div>
 		</div>
@@ -119,7 +155,15 @@ import Project from "../components/Project.astro";
 		justify-content: space-between;
 		padding: 1rem;
 		border-radius: 10px;
-		height: 600px;
+	}
+
+	.card-animation{
+		animation: fadeColor 5s infinite alternate forwards;
+	}
+
+	.left-card {
+		display: flex;
+		gap: 10px;
 	}
 
 	.left-card h1 {
@@ -151,5 +195,20 @@ import Project from "../components/Project.astro";
 		flex-direction: column;
 		align-items: flex-start;
 		width: 100px;
+	}
+
+	@keyframes fadeColor {
+		0% {
+			background-color: var(--background-card-hover);
+		}
+		50% {
+			background-color: #33333b;
+		}
+		75% {
+			background-color: var(--background-card-hover);
+		}
+		100% {
+			background-color: var(--background-card-color);
+		}
 	}
 </style>

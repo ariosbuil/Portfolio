@@ -13,9 +13,15 @@ const { title } = Astro.props;
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<script
+			src="https://kit.fontawesome.com/2cb8249373.js"
+			crossorigin="anonymous"></script>
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+			rel="stylesheet"
+		/>
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
@@ -25,7 +31,7 @@ const { title } = Astro.props;
 </html>
 <style is:global>
 	:root {
-		--background-color: rgb(18,18,18);
+		--background-color: rgb(18, 18, 18);
 	}
 
 	* {
@@ -35,12 +41,12 @@ const { title } = Astro.props;
 	}
 
 	@font-face {
-		font-family: 'Graphik';
+		font-family: "Graphik";
 		src: url(../fonts/Avuh4OpxOvtDN3CjsvbNSVN1ONU~xjAnfZorI2pOA_Exu-MJzwyJ9r9XtzOM8Dqc3V3NAU4.woff);
 	}
 
 	html {
-		font-family: 'Graphik';
+		font-family: "Graphik";
 		font-size: 20px;
 		background-color: var(--background-color);
 		height: 100%;

@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Quote from "../components/Quote.astro";
+import SoftSkill from "../components/SoftSkill.astro";
 import Experience from "../components/Experience.astro";
 import IconAstro from "../images/tech-stack/astro-icon.svg";
 import IconCss from "../images/tech-stack/css-3.svg";
@@ -20,27 +20,27 @@ import ContactMe from "../components/ContactMe.astro";
             <div class="flex gap-4">
                 <h1 class="text-3xl">ARNAU RIOS BUIL</h1>
                 <p class="self-end">
-                    <a href="/" class="hover:text-text-hover hover:underline"
+                    <a href="/" class="hover:text-text-hover underline"
                         >INDEX</a
                     > / <span>BIOGRAPHY</span>
                 </p>
             </div>
             <!-- Biography Content 1st Row -->
-            <div class="grid lg:grid-cols-3 gap-4 h-[500px]">
+            <div class="grid sm:flex sm:flex-col md:flex-col xl:flex-row lg:grid-cols-3 gap-4">
                 <!-- Quotes -->
-                <div class="lg:col-span-2 p-4 bg-card flex gap-4 rounded">
+                <div class="flex flex-col sm:flex-row md:col-span-2 p-4 bg-card gap-4 rounded">
                     <div>
                         <img
-                            class="h-[400px] object-cover rounded shadow-md"
+                            class="h-full object-cover rounded shadow-md"
                             src="Biography-photo.jpg"
                             alt="Portrait Photo"
                         />
                     </div>
                     <div class="grid lg:grid-cols-2 gap-4 w-full">
-                        <Quote text="Coding dreams into existence on the canvas of the internet." />
-                        <Quote text="Code is poetry written for machines." />
-                        <Quote text="Turning ideas into reality through the language of the web." />
-                        <Quote text="Pixels may be tiny, but the impact is mighty." />
+                        <SoftSkill text="Problem Solving" />
+                        <SoftSkill text="Analytical Thinking" />
+                        <SoftSkill text="Collaboration and Teamwork" />
+                        <SoftSkill text="Clear Collaboration" />
                     </div>
                 </div>
                 <!-- Experience -->
@@ -50,9 +50,9 @@ import ContactMe from "../components/ContactMe.astro";
                 </div>
             </div>
             <!-- Biography Content 2nd Row -->
-            <div class="grid lg:grid-cols-3 gap-4 mb-4 h-[220px]">
+            <div class="flex flex-col h-[500px] md:grid grid-cols-3 gap-4 md:h-48">
                 <!-- Tech Stack -->
-                <div class="lg:col-span-1 p-4 bg-card rounded overflow-hidden">
+                <div class="col-span-1 p-4 bg-card rounded overflow-hidden">
                     <div class="slider gap-4 flex justify-around">
                         <div class="flex flex-col gap-10">
                             <img class="mt-10" src={IconJavaScript.src} alt=""/>
@@ -82,10 +82,16 @@ import ContactMe from "../components/ContactMe.astro";
                         </div>
                     </div>
                 </div>
-                <div class="lg:col-span-2 p-4 bg-card rounded">
+                <div class="col-span-2 p-4 bg-card rounded">
                     <h2 class="font-bold text-[24px]">Contact me</h2>
                     <ContactMe text="An opportunity? A piece of advice? Good things come to those who don't wait. Reach out to me below!"/>
                 </div>
+            </div>
+        </div>
+        <!-- Footer 3rd Row -->
+        <div class="grid grid-cols-3 gap-4 p-4">
+            <div class="col-span-3 flex justify-center items-center">
+                <p>&copy; 2024. Handcrafted by Arnau</p>
             </div>
         </div>
     </main>
